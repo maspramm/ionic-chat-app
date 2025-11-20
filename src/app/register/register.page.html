@@ -1,0 +1,17 @@
+
+<ion-content class="ion-padding">
+  <h1><b>Register</b></h1>
+  <ion-input placeholder="Username" 
+  (ionInput)="username = $any($event.target).value"
+  ></ion-input>
+  <br>
+  <ion-input placeholder="Password" type="password" 
+  (ionInput)="password = $any($event.target).value"
+  ></ion-input>
+  <br>
+  <ion-button expand="block" (click)="register()">Register</ion-button>
+  <ion-button expand="block" color="medium" routerLink="/home">
+    Sudah punya akun? Login
+  </ion-button>
+  <p style="color:red">{{ error }}</p>
+</ion-content>

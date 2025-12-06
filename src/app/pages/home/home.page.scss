@@ -1,0 +1,49 @@
+ion-header.title-header{
+  ion-toolbar{
+    font-family: "Satisfy", cursive !important;
+    ion-title{
+      letter-spacing: 2px;
+      font-size: 1.8rem !important;
+    }
+  }
+  ion-segment{
+    --background: var(--ion-color-primary);
+    ion-segment-button{
+      font-size: 1rem;
+      --color: var(--ion-color-light);
+      --color-checked:#fff;
+    }
+  }
+  ion-popover {
+    ion-content {
+      ion-label {
+        display: block;     // biar tampil
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--ion-color-danger) !important; // paksa merah
+      }
+    }
+  }
+
+}
+
+ion-content{
+  ion-list{
+    ion-list-header{
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    ion-item{
+      margin-top: 2vh;
+      ion-label{
+        font-size: 1.2rem;
+        p {
+          margin-top: 3px;
+        }
+      }
+      ion-text{
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+<ion-content [fullscreen]="true">
+  <ion-spinner class="ion-text-center" name="crescent" *ngIf="isLoading" ></ion-spinner>
+  <ion-card>
+    <form [formGroup]="signupForm">
+
+      <div class="ion-text-center ion-margin-vertical lock">
+        <ion-icon name="person-add"></ion-icon>
+      </div>
+
+      <!-- Name -->
+      <ion-item lines="none" class="ion-margin-horizontal ion-margin-top">
+        <ion-button slot="start" fill="clear" color="medium">
+          <ion-icon slot="icon-only" name="person-outline"></ion-icon>
+        </ion-button>
+        <ion-input
+          labelPlacement="floating"
+          type="text"
+          formControlName="name"
+          placeholder="Enter your name"
+          errorText="* Name is required"
+        >
+          <div slot="label">Name <ion-text color="danger">*</ion-text></div>
+        </ion-input>
+      </ion-item>
+
+      <!-- Email -->
+      <ion-item lines="none" class="ion-margin-horizontal ion-margin-top">
+        <ion-button slot="start" fill="clear" color="medium">
+          <ion-icon slot="icon-only" name="mail-outline"></ion-icon>
+        </ion-button>
+        <ion-input
+          labelPlacement="floating"
+          type="email"
+          formControlName="email"
+          placeholder="Enter email address"
+          errorText="* Enter proper email address"
+        >
+          <div slot="label">Email <ion-text color="danger">*</ion-text></div>
+        </ion-input>
+      </ion-item>
+
+      <!-- Password -->
+      <ion-item class="ion-margin" lines="none">
+        <ion-button slot="start" fill="clear" color="dark">
+          <ion-icon slot="icon-only" name="key-outline"></ion-icon>
+        </ion-button>
+
+        <ion-input
+          labelPlacement="floating"
+          [type]="isPwd ? 'text' : 'password'"
+          placeholder="Enter password"
+          formControlName="password"
+          [errorText]="signupForm.get('password')!.hasError('minlength') ? '* Password must be min. 8 characters long' : '* Enter a proper password'">
+          <div slot="label">Password <ion-text color="danger">*</ion-text></div>
+        </ion-input>
+        <ion-button slot="end" fill="clear" color="danger" (click)="togglePwd()">
+          <ion-icon slot="icon-only" [name]="isPwd ? 'eye-off-outline' : 'eye-outline'"></ion-icon>
+        </ion-button>
+      </ion-item>
+
+      <!-- Submit -->
+      <div class="ion-margin submit" (click)="onSubmit()">
+        <ion-button expand="block" size="large">
+          <ion-text><strong>Sign Up</strong></ion-text>
+        </ion-button>
+      </div>
+
+      <!-- Link to login -->
+      <div class="ion-text-center ion-margin">
+        <ion-text color="medium">Already have an account?</ion-text>
+        <ion-button fill="clear" color="primary" [routerLink]="['/login']">
+          <strong>Log In</strong>
+        </ion-button>
+      </div>
+    </form>
+  </ion-card>
+</ion-content>

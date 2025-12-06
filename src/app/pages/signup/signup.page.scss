@@ -1,0 +1,46 @@
+ion-content {
+  --background: url("/assets/imgs/flower.jpg") no-repeat center center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+
+ion-card {
+  margin: auto;
+  margin-top: 10vh;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9); /* putih lebih solid biar teks hitam jelas */
+  color: #000; /* default text hitam */
+}
+
+.lock {
+  font-size: 3rem;
+  color: var(--ion-color-primary);
+}
+
+ion-item {
+  --background: transparent;
+  --color: #000; /* isi input text hitam */
+  --placeholder-color: #666; /* placeholder abu biar beda */
+  --highlight-color-focused: var(--ion-color-primary);
+  --highlight-color-valid: var(--ion-color-primary);
+  --highlight-color-invalid: var(--ion-color-danger);
+}
+
+ion-label {
+  color: #000 !important; /* label hitam */
+}
+
+ion-text {
+  color: #000 !important; /* semua ion-text default hitam */
+}
+
+.submit ion-button {
+  --border-radius: 10px;
+  --background: linear-gradient(to right, #B006D0, #4E0894);
+  color: #fff; /* teks tombol tetap putih */
+}

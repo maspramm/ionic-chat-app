@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "chat",
+=======
+  "name": "TestCase",
+>>>>>>> origin/master
   "integrations": {
     "capacitor": {}
   },

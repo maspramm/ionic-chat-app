@@ -1,4 +1,5 @@
 export const environment = {
+<<<<<<< HEAD
   production: true,
   firebase: {
     apiKey: "AIzaSyBhX8TGn0dTniIX-2QQ5kwWqN0BDjOSqos",
@@ -9,4 +10,7 @@ export const environment = {
     appId: "1:352099239761:web:05eda1fe8fd4b88a45f570",
     measurementId: "G-G1JBMTKNZ0"
   }
+=======
+  production: true
+>>>>>>> origin/master
 };

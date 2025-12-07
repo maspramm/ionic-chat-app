@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <h1><b>Login</b></h1>
+    <br>
+    <ion-input label="Username" label-placement="floating" 
+    fill="outline" placeholder="Enter text"
+    (ionInput)="username = $any($event.target).value"
+    ></ion-input>
+
+    <br>
+    <ion-input label="Password" type="password" 
+    label-placement="floating" fill="outline" 
+    placeholder="Enter text"
+    (ionInput)="password = $any($event.target).value"
+    ></ion-input>
+
+    <br>
+    <ion-button (click)="login()"
+    fill="outline"
+    >Login</ion-button>
+
+    <br>
+    <p>Don't have an account?</p>
+    <ion-button routerLink="/register" color="medium"
+    fill="outline"
+    >Register</ion-button>
+    <p style="color: red;">{{ error }}</p>
+
+  </div>
+</ion-content>

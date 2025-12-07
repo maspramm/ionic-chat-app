@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+<<<<<<< HEAD
 import { AuthGuard } from './guards/auth/auth-guard';
 
 export const routes: Routes = [
@@ -6,10 +7,18 @@ export const routes: Routes = [
   {
     path: '',
     redirectTo: 'login',
+=======
+
+export const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'register',
+>>>>>>> origin/master
     pathMatch: 'full',
   },
   {
     path: 'home',
+<<<<<<< HEAD
     loadComponent: () => import('./pages/home/home.page').then( m => m.HomePage),
     canLoad: [AuthGuard]
   },
@@ -31,4 +40,20 @@ export const routes: Routes = [
     redirectTo: 'home'
   }
 
+=======
+    loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
+  },
+  {
+    path: 'register',
+    loadComponent: () => import('./register/register.page').then( m => m.RegisterPage)
+  },
+    {
+    path: 'welcome',
+    loadComponent: () => import('./welcome/welcome.page').then( m => m.WelcomePage)
+  },
+  {
+    path: 'users',
+    loadComponent: () => import('./users/users.page').then( m => m.UsersPage)
+  },
+>>>>>>> origin/master
 ];
